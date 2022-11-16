@@ -32,16 +32,19 @@ function askPlayer(){
     while (flag==false)
     {
         playerChoice = prompt("Choose your choice (1/2/3):\n1 - Rock\n2 - Paper\n3 - Scissors")
-        if (parseInt(playerChoice)==NaN){
-            alert("please choose a number!")
+        if (isNaN(Number(playerChoice)))
+        {
+            alert("please enter a number!")
         }
-
-        
+        if (choices[parseInt(playerChoice)-1]==undefined)
+        {
+            alert("please enter a number between 1-3!")
+        }
 
         else
         {
-        flag=true;
-    }
+            flag=true;
+        }
     }
     return choices[parseInt(playerChoice)-1]
 }
