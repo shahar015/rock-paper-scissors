@@ -26,3 +26,21 @@ function playRound (playerSelection, computerSelection){
         return "You Win! Scissors beats Paper"
 }
 
+function askPlayer(){
+    let flag = false;
+    while (flag==false)
+    {
+        let playerChoice = prompt("Choose your choice (1/2/3):\n1 - Rock\n2 - Paper\n3 - Scissors")
+        if (parseInt(playerChoice)==NaN){
+            alert("please choose a number!")
+        }
+
+        else if (choices[parseInt(playRound)-1]==null)
+        alert("please choose a number between 1-3!")
+
+        else
+        flag=true;
+    }
+    return choices[parseInt(playRound)-1]
+}
+
