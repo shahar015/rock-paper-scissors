@@ -1,4 +1,13 @@
 const choices=["Rock", "Paper", "Scissors"];
+const rock=document.querySelector("#rock");
+const paper=document.querySelector("#paper");
+const scissors=document.querySelector("#scissors");
+
+rock.addEventListener('click', playRound("Rock", getComputerChoice()));
+paper.addEventListener('click', playRound("Paper", getComputerChoice()));
+scissors.addEventListener('click', playRound("Scissors", getComputerChoice()));
+
+
 function getComputerChoice(){
     return randomItem = choices[Math.floor(Math.random()*choices.length)];
 }
